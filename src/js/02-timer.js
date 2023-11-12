@@ -17,7 +17,6 @@ let timerId = null;
 buttonRef.disabled = true;
 
 function handleOnClose(selectedDates) {
-  console.log(selectedDates);
   if (selectedDates[0] <= Date.now()) {
     buttonRef.disabled = true;
     return iziToast.show({
