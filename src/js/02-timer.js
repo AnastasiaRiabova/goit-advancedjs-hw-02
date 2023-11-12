@@ -16,7 +16,8 @@ let timerId = null;
 
 buttonRef.disabled = true;
 
-const handleOnClose = selectedDates => {
+function handleOnClose(selectedDates) {
+  console.log(selectedDates);
   if (selectedDates[0] <= Date.now()) {
     buttonRef.disabled = true;
     return iziToast.show({
@@ -26,7 +27,7 @@ const handleOnClose = selectedDates => {
     });
   }
   buttonRef.disabled = false;
-};
+}
 
 flatpickr(dateRef, {
   enableTime: true,
